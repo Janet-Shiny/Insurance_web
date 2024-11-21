@@ -20,7 +20,7 @@ const StatSection = () => {
   return (
     <section className="bg-black text-white py-14">
       <div className="flex flex-col md:flex-row justify-around items-center">
-        {[ 
+        {[
           { label: 'Success Stories', value: ['3', '4', 'K', '+'] },
           { label: 'Professional Team', value: ['2', '1', '0', '+'] },
           { label: 'Branches Nationwide', value: ['5', '4', 'K', '+'] },
@@ -30,7 +30,8 @@ const StatSection = () => {
             key={index}
             variants={statVariant}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.5 }}
             className="m-7 text-center"
           >
             {/* Map each character/digit separately */}
@@ -39,7 +40,8 @@ const StatSection = () => {
                 <motion.span
                   key={digitIndex}
                   initial={{ opacity: 0, y: -50 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: false, amount: 0.5 }}
                   transition={{ delay: digitIndex * 0.2, duration: 0.5 }}
                   className="text-4xl font-bold"
                 >
@@ -69,7 +71,8 @@ function Accom() {
             <motion.h3
               variants={textVariant}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.5 }}
               className="text-gray-700 text-5xl mb-5 font-bold uppercase"
             >
               About Us
@@ -77,7 +80,8 @@ function Accom() {
             <motion.h2
               variants={textVariant}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.5 }}
               className="text-5xl font-bold mb-6"
             >
               <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">Innovating Insurance Solutions</span>
@@ -85,7 +89,8 @@ function Accom() {
             <motion.p
               variants={textVariant}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.5 }}
               className="text-black mb-8"
             >
               "Insurance isn’t just a policy; it’s a promise. A promise to protect your dreams, your loved ones, and your peace of mind. With us, your future is always secure."
@@ -105,7 +110,8 @@ function Accom() {
             <Parallax translateY={[10, -10]} className="m-10">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.5 }}
                 transition={{ delay: 0.2, duration: 0.8 }}
                 className="group relative w-[30vw] h-[50vh] bg-gray-300 rounded-lg shadow-lg"
               >
@@ -126,7 +132,8 @@ function Accom() {
             <Parallax translateY={[10, -10]} className="m-10">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.5 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
                 className="group relative w-[30vw] h-[50vh] bg-gray-300 rounded-lg shadow-lg cursor-pointer"
               >
@@ -146,7 +153,8 @@ function Accom() {
             <Parallax translateY={[10, -10]} className="m-10">
               <motion.div
                 initial={{ opacity: 0, y: 50 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: false, amount: 0.5 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
                 className="group relative w-[30vw] h-[50vh] bg-gray-300 rounded-lg shadow-lg"
               >
