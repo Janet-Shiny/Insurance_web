@@ -6,7 +6,8 @@ import Healthins from './Components/Healthins';
 import Homeins from './Components/Homeins';
 import AutoInsurance from './Components/Autoins';
 import Lifeins from './Components/Lifeins';
-import QuotePage from './Components/QuotePage';  // Import new QuotePage component
+import QuotePage from './Components/QuotePage'; // Import new QuotePage component
+import Table from './Components/table'; // Import Table component
 
 function App() {
   return (
@@ -25,9 +26,12 @@ function App() {
           <Route path="/health-insurance" element={<Healthins />} />
           <Route path="/home-insurance" element={<Homeins />} />
           <Route path="/auto-insurance" element={<AutoInsurance />} />
-          
-          {/* New Route for Get a Quote Page */}
+
+          {/* Route for Get a Quote Page */}
           <Route path="/get-a-quote" element={<QuotePage />} />
+
+          {/* Route for Table Page */}
+          <Route path="/table" element={<Table />} />
         </Routes>
       </Router>
     </div>

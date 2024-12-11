@@ -28,7 +28,8 @@ export default function Header() {
     location.pathname === "/Lifeins" ||
     location.pathname === "/health-insurance" ||
     location.pathname === "/auto-insurance" ||
-    location.pathname === "/home-insurance";
+    location.pathname === "/home-insurance"||
+    location.pathname === "/table";
 
   // Don't render header if we are on one of the specified pages
   if (shouldHideHeader) return null;

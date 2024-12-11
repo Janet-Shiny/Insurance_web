@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import heroImage from "../Assests/Images/main.jpeg"; // Replace with the correct path to your image
-import graphImage from "../Assests/Images/graph.jpeg"; // The graph image you uploaded
-import { Link } from 'react-router-dom';
+import graphImage from "../Assests/Images/graph.jpeg"; // Replace with the correct path to your image
 
 const Home = () => {
   return (
@@ -50,27 +50,27 @@ const Home = () => {
 
         {/* Buttons and Contact */}
         <motion.div
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1.2 }}
-  className="flex flex-col sm:flex-row sm:space-x-4 pt-6 lg:pt-10 items-center justify-center"
->
-  <Link to="/get-a-quote">
-    <motion.button
-      whileHover={{ scale: 1.1 }}
-      whileTap={{ scale: 0.95 }}
-      className="bg-black text-white text-sm sm:text-lg px-4 py-3 sm:px-5 sm:py-4 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300"
-    >
-      Get a Quote
-    </motion.button>
-  </Link>
-  <a
-    href="tel:+1234567891"
-    className="mt-4 sm:mt-0 text-center sm:text-left flex items-center text-black space-x-2 hover:text-blue-500 text-sm sm:text-lg"
-  >
-    📞 +91 8807120111
-  </a>
-</motion.div>
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2 }}
+          className="flex flex-col sm:flex-row sm:space-x-4 pt-6 lg:pt-10 items-center justify-center"
+        >
+          <Link to="/get-a-quote">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-black text-white text-sm sm:text-lg px-4 py-3 sm:px-5 sm:py-4 rounded-lg shadow-lg hover:bg-gray-800 transition duration-300"
+            >
+              Get a Quote
+            </motion.button>
+          </Link>
+          <a
+            href="tel:+1234567891"
+            className="mt-4 sm:mt-0 text-center sm:text-left flex items-center text-black space-x-2 hover:text-blue-500 text-sm sm:text-lg"
+          >
+            📞 +91 8807120111
+          </a>
+        </motion.div>
 
         {/* Play Video Link */}
         <motion.p
@@ -97,30 +97,32 @@ const Home = () => {
         />
 
         {/* Growth Stats and Graph */}
-        <motion.div
-          className="p-4 sm:p-6 bg-white/60 rounded-3xl shadow-lg flex items-center space-x-4"
-          whileHover={{ scale: 1.05 }}
-        >
-          {/* Growth Rate */}
-          <motion.p
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-xl sm:text-2xl lg:text-3xl font-semibold text-blue-600"
+        <Link to="/table">
+          <motion.div
+            className="p-4 sm:p-6 bg-white/60 rounded-3xl shadow-lg flex items-center space-x-4 cursor-pointer"
+            whileHover={{ scale: 1.05 }}
           >
-            <span className="text-black/70">80% Growth Rate</span>
-          </motion.p>
+            {/* Growth Rate */}
+            <motion.p
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="text-xl sm:text-2xl lg:text-3xl font-semibold text-blue-600"
+            >
+              <span className="text-black/70">80% Growth Rate</span>
+            </motion.p>
 
-          {/* Growth Image */}
-          <motion.img
-            src={graphImage}
-            alt="Growth Graph"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            className="w-24 sm:w-32 lg:w-48 h-16 sm:h-20 lg:h-28 rounded-lg shadow-lg"
-          />
-        </motion.div>
+            {/* Growth Image */}
+            <motion.img
+              src={graphImage}
+              alt="Growth Graph"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="w-24 sm:w-32 lg:w-48 h-16 sm:h-20 lg:h-28 rounded-lg shadow-lg"
+            />
+          </motion.div>
+        </Link>
       </div>
     </section>
   );
